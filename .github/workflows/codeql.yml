@@ -93,13 +93,16 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+        
     - name: Perform Secret Scanning
       uses: advanced-security/secret-scanning-tools@v1
+      
     - name: Generate GHAS Report
       uses: peter-murray/github-security-report-action@v2
       with:  
         token: ${{ secrets.SECURITY_TOKEN }}
         outputDir: .
+        sarifReportDir: ./results
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:

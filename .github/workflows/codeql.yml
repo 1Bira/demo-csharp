@@ -101,6 +101,9 @@ jobs:
       run: |
         pwd
         ls
+        cd ..
+        pwd
+        ls
     
     - name: Generate GHAS Report ${{ matrix.language }}
       uses: peter-murray/github-security-report-action@v2
@@ -109,6 +112,9 @@ jobs:
         
     - name: Verify app2
       run: |
+        pwd
+        ls
+        cd ..
         pwd
         ls
         

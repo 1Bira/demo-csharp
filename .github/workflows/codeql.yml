@@ -124,7 +124,7 @@ jobs:
     - name: Upload GHAS metrics report as artifact ${{ matrix.language }}
       uses: actions/upload-artifact@v4
       with:
-        name: ghas-metrics-report
+        name: ghas-metrics-report_t
         path: ${{ github.workspace }}/ghas-report.*
 
 

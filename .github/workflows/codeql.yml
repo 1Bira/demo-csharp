@@ -101,7 +101,7 @@ jobs:
       uses: peter-murray/github-security-report-action@v2
       with:  
         token: ${{ secrets.SECURITY_TOKEN }}
-        outputDir: ./
+        outputDir: ${{ github.workspace }}
         sarifReportDir: ../results
         
     - name: Upload Artifacts ${{ matrix.language }}

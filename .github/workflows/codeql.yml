@@ -97,44 +97,44 @@ jobs:
     - name: Perform Secret Scanning ${{ matrix.language }}
       uses: advanced-security/secret-scanning-tools@v1
     
-    - name: Generate GHAS Report ${{ matrix.language }}
-      uses: peter-murray/github-security-report-action@v2
-      with:  
-        token: ${{ secrets.SECURITY_TOKEN }}
-        sarifReportDir: /home/runner/work/demo-csharp/results
-        outputDir: /home/runner/work/demo-csharp/results
+    #- name: Generate GHAS Report ${{ matrix.language }}
+    #  uses: peter-murray/github-security-report-action@v2
+    #  with:  
+    #    token: ${{ secrets.SECURITY_TOKEN }}
+    #    sarifReportDir: /home/runner/work/demo-csharp/results
+    #    outputDir: /home/runner/work/demo-csharp/results
+  
+    #- name: Verify app2
+    #  run: | 
+    #    ls
+    #    cd ..
+    #    pwd
+    #    ls
+    #    ls results
+    #    ls demo-csharp
         
-    - name: Verify app2
-      run: | 
-        ls
-        cd ..
-        pwd
-        ls
-        ls results
-        ls demo-csharp
-        
-    - name: Upload Artifacts ${{ matrix.language }}
-      uses: actions/upload-artifact@v4
-      with:
-        name: reports
-        path: /home/runner/work/demo-csharp/results/csharp.sarif
-        
-    #- name: Generate GHAS Metrics Report ${{ matrix.language }}
-    #  uses: theztefan/ghas-metrics-report@v1.2.1
-    #  env:
-    #    GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
-    #  with:
-    #    repo: ${{ github.event.repository.name }}
-    #    org: ${{ github.repository_owner }}
-    #    features: "dependabot, code-scanning, secret-scanning"
-    #    frequency: "daily"
-    #    output-format: "json, pdf, issues, github-output"
-        
-    #- name: Upload GHAS metrics report as artifact ${{ matrix.language }}
+    #- name: Upload Artifacts ${{ matrix.language }}
     #  uses: actions/upload-artifact@v4
     #  with:
-    #    name: ghas-metrics-report_t
-    #    path: ${{ github.workspace }}/ghas-report.*
+    #    name: reports
+     #   path: /home/runner/work/demo-csharp/results/csharp.sarif
+        
+    - name: Generate GHAS Metrics Report ${{ matrix.language }}
+      uses: theztefan/ghas-metrics-report@v1.2.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.SECURITY_TOKEN }}
+      with:
+        repo: ${{ github.event.repository.name }}
+        org: ${{ github.repository_owner }}
+        features: "dependabot, code-scanning, secret-scanning"
+        frequency: "daily"
+        output-format: "json, pdf, issues, github-output"
+        
+    - name: Upload GHAS metrics report as artifact ${{ matrix.language }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: ghas-metrics-report_t
+        path: ${{ github.workspace }}/ghas-report.*
 
 
     

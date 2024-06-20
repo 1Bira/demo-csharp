@@ -96,15 +96,18 @@ jobs:
         
     - name: Perform Secret Scanning ${{ matrix.language }}
       uses: advanced-security/secret-scanning-tools@v1
-      
+
+    - name: Verify app2
+      run: |
+        pwd
+        ls
+    
     - name: Generate GHAS Report ${{ matrix.language }}
       uses: peter-murray/github-security-report-action@v2
       with:  
         token: ${{ secrets.SECURITY_TOKEN }}
-        outputDir: ${{ github.workspace }}
-        sarifReportDir: ../results
-
-    - name: Verify app
+        
+    - name: Verify app2
       run: |
         pwd
         ls

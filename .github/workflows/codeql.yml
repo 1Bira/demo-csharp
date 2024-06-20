@@ -101,9 +101,12 @@ jobs:
       uses: peter-murray/github-security-report-action@v2
       with:  
         token: ${{ secrets.SECURITY_TOKEN }}
+        sarifReportDir: /home/runner/work/demo-csharp/results/csharp.sarif
+        outputDir: /home/runner/work/demo-csharp/results
         
     - name: Verify app2
-      run: |        
+      run: | 
+        ls
         cd ..
         pwd
         ls

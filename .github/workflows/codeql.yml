@@ -104,11 +104,11 @@ jobs:
         outputDir: ./
         sarifReportDir: ../results
         
-    - name: Upload Artifacts ${{ matrix.language }}
-      uses: actions/upload-artifact@v4
-      with:
-        name: reports
-        path: ./*.pdf
+    #- name: Upload Artifacts ${{ matrix.language }}
+    #  uses: actions/upload-artifact@v4
+    # with:
+    #    name: reports
+    #    path: ./*.pdf
         
     - name: Generate GHAS Metrics Report ${{ matrix.language }}
       uses: theztefan/ghas-metrics-report@v1.2.1

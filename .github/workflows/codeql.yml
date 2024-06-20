@@ -111,6 +111,7 @@ jobs:
         pwd
         ls
         ls results
+        ls demo-csharp
         
     - name: Upload Artifacts ${{ matrix.language }}
       uses: actions/upload-artifact@v4

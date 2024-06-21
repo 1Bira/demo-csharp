@@ -110,8 +110,12 @@ jobs:
         cd ..
         pwd
         ls
-        ls results
-        ls demo-csharp
+        cd results
+        pwd
+        ls
+        cd ../demo-csharp
+        pwd
+        ls
         
     - name: Upload Artifacts ${{ matrix.language }}
       uses: actions/upload-artifact@v4

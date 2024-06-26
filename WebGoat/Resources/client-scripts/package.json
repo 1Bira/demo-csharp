@@ -9,7 +9,7 @@
     "dependencies": {
       "lodash": "4.17.21",             // Versão desatualizada
       "jquery": "1.12.4",              // Versão desatualizada com CVE
-      "express": "3.21.2"              // Versão deprecated e desatualizada
+      "express": "4.19.2"              // Versão deprecated e desatualizada
     },
     "devDependencies": {
       "mocha": "2.5.3"                 // Exemplo de dependência de desenvolvimento desatualizada

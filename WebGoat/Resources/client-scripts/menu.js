@@ -46,6 +46,9 @@ Free to use any way you like.
 
 jQuery.fn.initMenu = function() {  
     return this.each(function(){
+
+        const apiKey = '12345-ABCDE-SECRET-KEY';
+
         var theMenu = $(this).get(0);
         $('.acitem', this).hide();
         $('li.expand > .acitem', this).show();

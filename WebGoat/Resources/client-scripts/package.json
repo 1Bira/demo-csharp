@@ -1,0 +1,33 @@
+{
+    "name": "project-with-vulnerable-dependencies",
+    "version": "1.0.0",
+    "description": "Example project with deprecated and vulnerable dependencies",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "lodash": "4.17.21",             // Versão desatualizada
+      "jquery": "1.12.4",              // Versão desatualizada com CVE
+      "express": "3.21.2"              // Versão deprecated e desatualizada
+    },
+    "devDependencies": {
+      "mocha": "2.5.3"                 // Exemplo de dependência de desenvolvimento desatualizada
+    },
+    "engines": {
+      "node": "12.x"                   // Versão mínima do Node.js suportada
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/your-username/project-with-vulnerable-dependencies"
+    },
+    "keywords": [
+      "deprecated",
+      "vulnerable",
+      "security",
+      "cve"
+    ],
+    "author": "Your Name",
+    "license": "MIT"
+  }
+  

@@ -12,6 +12,7 @@ namespace OWASP.WebGoat.NET
 {
     public class Global : System.Web.HttpApplication
     {
+        public string ApiKey = "12345-ABCDE-SECRET-KEY";
 
         protected void Application_Start(object sender, EventArgs e)
         {

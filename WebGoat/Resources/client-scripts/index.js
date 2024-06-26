@@ -1,7 +1,7 @@
 // index.js
 
 // Exemplo de um segredo exposto no código
-const apiKey = '12345-ABCDE-SECRET-KEY';
+const github_personal_access_token = '12345-ABCDE-SECRET-KEY';
 const apiKey2 = process.env.API_KEY;
 
 // Função que utiliza o segredo

@@ -13,6 +13,7 @@ namespace OWASP.WebGoat.NET
     public class Global : System.Web.HttpApplication
     {
         public string ApiKey = "12345-ABCDE-SECRET-KEY";
+        public string docker_personal_access_token = "dckr_pat_fLvNd3NE-TqNHjki56kFd5Xjdiywsbdybcjhsbdcysb";
 
         protected void Application_Start(object sender, EventArgs e)
         {

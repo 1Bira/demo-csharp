@@ -55,7 +55,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Data" />
     <Reference Include="System.Configuration" />
-    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+    <Reference Include="MySql.Data, Version=5.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
       <HintPath>lib\mysql.data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.Entity, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">

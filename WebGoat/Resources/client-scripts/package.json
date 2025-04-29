@@ -8,7 +8,7 @@
     },
     "dependencies": {
       "lodash": "4.17.21",             // Versão desatualizada
-      "jquery": "1.12.4",              // Versão desatualizada com CVE
+      "jquery": "3.5.0",              // Versão desatualizada com CVE
       "express": "3.21.2"              // Versão deprecated e desatualizada
     },
     "devDependencies": {
